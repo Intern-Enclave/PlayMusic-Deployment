@@ -11,6 +11,7 @@ services:
     volumes:
       - mysql-docker-data:/var/lib/mysql
       - mysql-docker-config-deamond:/etc/mysql/conf.d
+      - ./dump_playmusic.sql:/docker-entrypoint-initdb.d
     networks:
       - backend
     environment:
